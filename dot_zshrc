@@ -8,10 +8,14 @@ if [ -f ~/.zoxiderc ]; then
 	source ~/.zoxiderc
 	eval "$(zoxide init zsh)"
 fi
+
 alias cat=bat
+
+# Common Servers
 alias thoth='ssh shk148@thoth.cs.pitt.edu'
-
-
+alias elements='ssh shk148@elements.cs.pitt.edu'
+alias 'linux.cs.pitt'='ssh shk148@linux.cs.pitt.edu'
+alias 'linux.it.pitt'='ssh shk148@linux-ts.it.pitt.edu'
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -84,7 +88,7 @@ zstyle ':omz:update' frequency 13
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zoxide fzf git-open)
+plugins=(git zoxide fzf git-open zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
