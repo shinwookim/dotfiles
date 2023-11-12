@@ -5,11 +5,11 @@ if [ ! -d ~/.nano ]; then
 	curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 fi
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 if [ -f ~/.zoxiderc ]; then
 	source ~/.zoxiderc
-	eval "$(zoxide init zsh)"
+#	eval "$(zoxide init zsh)"
 fi
 
 if [ -f ~/.brewrc ]; then
