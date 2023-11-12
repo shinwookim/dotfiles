@@ -1,12 +1,19 @@
 
 export VISUAL="nano"
 export EDITOR="nano"
+if [ ! -d ~/.nano ]; then
+	curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+fi
 
 eval $(thefuck --alias)
 
 if [ -f ~/.zoxiderc ]; then
 	source ~/.zoxiderc
 	eval "$(zoxide init zsh)"
+fi
+
+if [ -f ~/.brewrc ]; then
+	source ~/.brewrc
 fi
 
 alias cat=bat
